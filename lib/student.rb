@@ -62,7 +62,7 @@ class Student
   def update
   end
   
-  def find_by_name(name_find)
+  def self.find_by_name(name_find)
     sql = <<-SQL
       SELECT * 
       FROM students
