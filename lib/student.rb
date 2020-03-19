@@ -60,6 +60,9 @@ class Student
     student.name = row[1]
     student.grade = row[2]
   end
+  
+  def update
+  end
 
 
 end
