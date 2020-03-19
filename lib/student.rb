@@ -68,7 +68,7 @@ class Student
       FROM students
       WHERE name = ?
     SQL
-    result = DB[:conn].execute(sql,name_find)
+    result = DB[:conn].execute(sql,name_find)[0]
     Student.new_from_db(result)
   end
 
