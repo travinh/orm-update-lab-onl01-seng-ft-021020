@@ -62,7 +62,15 @@ class Student
   def update
   end
   
-  def
+  def find_by_name(name_find)
+    sql = <<-SQL
+      SELECT * 
+      FROM students
+      WHERE name = ?
+    SQL
+    result = DB[:conn].execute(sql,name_find)
+    Student.new_from_db(result)
+  end
 
 
 end
